@@ -35,11 +35,11 @@ The dataset consists of 10 CSV files:
 
 #### Sample Visualizations
 1. **Sales Trend**
-   ![Sales Trend](images\Areachart.png)
+   ![Sales Trend](images/Areachart.png)
 2. **Product Category Sales Distribution**
-   ![Product Category Sales](images\Piechart.png)
+   ![Product Category Sales](images/Piechart.png)
 3. **Region Segmentation by Country**
-   ![Region Segmentation](images\Barchart.png)
+   ![Region Segmentation](images/Barchart.png)
 
 ### 3. Data Serving and Visualization
 - **Service Used:** Azure Synapse Analytics
