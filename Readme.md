@@ -1,74 +1,75 @@
-# Adventure Works Data Engineering Project
+Here is the humanized version of your content:  
 
-## Overview
-This project demonstrates a complete Data Engineering pipeline using Microsoft Azure services with the Adventure Works dataset. The pipeline covers data ingestion, transformation, and serving, utilizing Azure Data Factory, Azure Databricks, Azure Data Lake Gen2, and Azure Synapse Analytics. The goal of the project is to efficiently process and visualize the dataset for analytical purposes.
+# Adventure Works Data Engineering Project  
 
-## Dataset Details
-The dataset consists of 10 CSV files:
-1. `calendar.csv` - Contains date-related information.
-2. `customers.csv` - Includes customer details.
-3. `product_categories.csv` - Provides product category information.
-4. `product_sub_categories.csv` - Lists product subcategories.
-5. `products.csv` - Contains product-level details.
-6. `returns.csv` - Records product return transactions.
-7. `sales2015.csv` - Sales data for the year 2015.
-8. `sales2016.csv` - Sales data for the year 2016.
-9. `sales2017.csv` - Sales data for the year 2017.
-10. `territories.csv` - Details of sales territories.
+## Overview  
+This project is a full Data Engineering pipeline with Azure solutions on the Adventure Works dataset. The pipeline is made up of data ingestion, data transformation, as well as serving, with Azure Data Factory, Azure Databricks, Azure Data Lake Gen2, and Azure Synapse Analytics. The emphasis is on efficiently processing and presenting the dataset in a bid to attain analytical insights.  
 
-## Architecture and Workflow
-### 1. Data Ingestion
-- **Service Used:** Azure Data Factory (ADF)
-- **Approach:**
-  - Implemented dynamic data extraction from GitHub.
-  - Utilized looping and lookup activities to iterate through multiple datasets.
-  - Configured pipelines to fetch and store raw data into Azure Data Lake Gen2.
+## Dataset Characteristics  
+The data comprises 10 CSV files:  
+1. `calendar.csv` - date-based data.  
+2. `customers.csv` - contains customer information.  
+3. `product_categories.csv` - Product category data.  
+4. `product_sub_categories.csv` - Product subcategories  
+5. `products.csv` - Product information.  
+6. `returns.csv` - Product return transactions are recorded.  
+7. `sales2015.csv` - Sales data from 2015.  
+8. `sales2016.csv` - sales in 2016.  
+9. `sales2017.csv` - Sales data from 2017.  
+10. `territories.csv` - Sales territory information.  
 
-### 2. Data Transformation & Analysis
-- **Service Used:** Azure Databricks & Azure Data Lake Gen2
-- **Approach:**
-  - Loaded raw data from Azure Data Lake Gen2.
-  - Performed data cleaning, formatting, and transformations using PySpark.
-  - Merged sales data from different years to create a consolidated sales dataset.
-  - Handled missing values and ensured data consistency across all tables.
-  - **Performed Big Data Analysis**: Generated various visualizations using PySpark to analyze trends and patterns within the data.
+## Architecture and Flow  
+### 1. Ingesting Data  
+- **Tool utilized:** Azure Data Factory (ADF)  
+- **Approach**  
+  - Added dynamic data retrieval from GitHub.  
+  - Used looping and lookup activities to process multiple datasets.  
+  - Configured pipelines that pull raw data from Azure Data Lake Gen2.  
 
-#### Sample Visualizations
-1. **Sales Trend**
-   ![Sales Trend](images/Areachart.png)
-2. **Product Category Sales Distribution**
-   ![Product Category Sales](images/Piechart.png)
-3. **Region Segmentation by Country**
-   ![Region Segmentation](images/Barchart.png)
+### 2. Data Transformation & Analysis  
+- **Tool utilized:** Azure Databricks & Azure Data Lake Gen2  
+- **Approach**  
+  - Loaded raw data from Azure Data Lake Gen2.  
+  - Carried out data formatting, cleaning, and transformation with PySpark.  
+  - Integrated sales data from a series of years into a single database.  
+  - Dealt with missing values and made data consistent.  
+  - **Carried out Big Data Analysis:** Developed visualization with PySpark in order to determine trends and patterns.  
 
-### 3. Data Serving and Visualization
-- **Service Used:** Azure Synapse Analytics
-- **Approach:**
-  - Created an **external table** in Synapse Analytics pointing to the transformed data stored in Azure Data Lake Gen2.
-  - Enabled querying of the external table for further analysis and visualization.
-  - Data was made available for business intelligence and reporting tools.
+#### Visualizations Examples  
+1. **Sales Trend**  
+   ![Sales Trend](images/Areachart.png)  
+2. **Product Category Sales Distribution**  
+   ![Product Category Revenue](images/Piechart.png)  
+3. **Region Segmentation by Country**  
+   ![Region Segmentation](images/Barchart.png)  
 
-## Tools & Technologies Used
-- **Azure Data Factory (ADF):** For orchestrating data ingestion pipelines.
-- **Azure Data Lake Gen2:** For raw and transformed data storage.
-- **Azure Databricks:** For performing data transformations using PySpark.
-- **Azure Synapse Analytics:** For serving and querying the transformed data.
-- **GitHub:** Source of raw dataset files.
-- **PySpark:** For big data analysis and visualizations.
+### 3. Serving Data and Visualization  
+- **Service utilized:** Azure Synapse Analytics  
+- **Approach**  
+  - Developed a **Synapse Analytics external table** that refers to Azure Data Lake Gen2 transformed data.  
+  - Supported querying of the external table for enhanced visualization and analysis.  
+  - Enabled data accessibility for reporting as well as business intelligence solutions.  
 
-## Key Features Implemented
-- **Automated Data Ingestion:** Used lookup and looping in ADF to dynamically pull datasets from GitHub.
-- **Scalable Data Processing:** Leveraged Apache Spark on Databricks for efficient large-scale data transformation.
-- **Big Data Analytics & Visualization:** Performed exploratory data analysis and visualizations using PySpark.
-- **Seamless Data Serving:** External table in Synapse Analytics allows direct querying of transformed data without additional storage overhead.
-- **Cloud-based Architecture:** Utilized Azure services to ensure scalability, reliability, and efficiency.
+## Tools & Technologies Used  
+- **Azure Data Factory (ADF):** To oversee data ingestion pipelines.  
+- **Azure Data Lake Gen2:** To hold raw as well as processed data.  
+- **Azure Databricks:** To execute data transformations with PySpark.  
+- **Azure Synapse Analytics:** To query and deliver processed data.  
+- **GitHub:** Source code repository with raw data files.  
+- **PySpark:** For big data visualization as well as processing.  
 
-## Future Enhancements
-- **Implement Incremental Data Loads:** Instead of full dataset extraction, optimize pipelines to fetch only new or updated records.
-- **Enhance Data Transformations:** Apply additional business logic to improve data usability.
-- **Integrate BI Tools:** Connect Power BI or Tableau for advanced analytics and visualization.
-- **Performance Optimization:** Optimize queries in Synapse Analytics for faster data retrieval.
+## Main Features Implemented  
+- **Automated Ingestion of Data:** Leveraging ADF lookups and loops in order to dynamically pull data from GitHub.  
+- **Scalable data processing:** Utilized Apache Spark on Databricks for big data transformation.  
+- **Big Data Analytics & Visualization:** Conducted exploratory data analysis and created visualization insights with PySpark.  
+- **Fast Serving of Data:** Direct querying over processed data with no extra cost in terms of additional storage.  
+- **Infrastructure in Cloud:** Leveraging Azure resources for scale, stability, and cost-effectiveness.  
 
-## Conclusion
-This project successfully demonstrates a cloud-based data pipeline for handling real-world datasets. By leveraging Azure services, we efficiently ingested, transformed, and served the Adventure Works dataset, enabling seamless data analysis and reporting.
+## Future Improvements  
+- **Incremental Imports of Data:** Use pipelines that load new or updated data in preference over full data.  
+- **Improve Data Transformations:** Use more business logic in order to enhance data usability.  
+- **Integrations with BI Tools:** Integrate with either Power BI or Tableau for more advanced analytics and visualization.  
+- **Performance Tuning:** Enhance query speed in Synapse Analytics with faster data retrieval.  
 
+## Conclusion  
+This project clearly defines a cloud-based data pipeline in a live scenario with a sample dataset. Leveraging Azure resources, we ingested, transformed, and served Adventure Works data with ease, making data analysis and reporting a hassle-free experience.
