@@ -1,5 +1,3 @@
-Here is the humanized version of your content:  
-
 # Adventure Works Data Engineering Project  
 
 ## Overview  
